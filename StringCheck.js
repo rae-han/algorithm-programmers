@@ -1,5 +1,4 @@
 let solution = (s) => {
-  console.log(s.split("").map(char => isNaN(char)));
   return s.length === 4 || s.length === 6 ? !s.split("").find(char => isNaN(char)) : false;
   // 길이가 4, 6인지 우선 확인
   // split 함수를 통해서 문자열을 하나씩 쪼개서 배열로 만든다.
@@ -18,7 +17,6 @@ let testCaseList = [
 
 for (const testCase of testCaseList) {
   let result = solution(testCase.case);
-  console.log(`result ${result}`)
   console.log(result === testCase.result)
 }
 
