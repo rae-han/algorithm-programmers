@@ -6,6 +6,7 @@ let testCaseList = [
 
 const solution = (arr, divisor) => {
   let result = arr.filter(value => value%divisor === 0).sort((larger, smaller) => larger-smaller);
+  // arr에 있는 요소 중 divisor로 나눠지는 것만 추려낸 후 내림차순으로 정렬해준다.
   return result.length !== 0 ? result : [-1]
 }
 
